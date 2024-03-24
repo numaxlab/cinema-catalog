@@ -1,8 +1,6 @@
 <?php
 
-
 return [
-
     'title' => 'Title',
     'name' => 'Name',
     'description' => 'Description',
@@ -45,7 +43,6 @@ return [
     'project_collection' => 'Project collection',
     'project_collections' => 'Project collections',
 
-
     'address' => [
         'label' => 'Address',
         'street' => 'Street',
@@ -57,10 +54,7 @@ return [
         'coordinates' => 'Coordinates',
         'latitude' => 'Latitude',
         'longitude' => 'Longitude',
-
-
     ],
-
 
     'projects_status' => [
         'development' => 'Development',
@@ -86,7 +80,6 @@ return [
         'audio' => 'Audio',
     ],
 
-
     'default_project_artistic_info' => [
         'script' => 'Script',
         'interpreters' => 'Interpreters',
@@ -99,6 +92,4 @@ return [
         'production_direction' => 'Production director',
         'distribution' => 'Distribution',
     ]
-
-
 ];

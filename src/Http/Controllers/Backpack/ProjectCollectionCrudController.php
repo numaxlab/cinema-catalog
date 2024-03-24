@@ -1,24 +1,21 @@
 <?php
 
-namespace NumaxLab\CinemaCatalogBackpack\Http\Controllers;
+namespace NumaxLab\CinemaCatalog\Http\Controllers\Backpack;
 
-use App\Http\Requests\FilmMakerRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class FilmMakerCrudController
+ * Class ProjectCollectionCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class FilmMakerCrudController extends CrudController
+class ProjectCollectionCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\ReorderOperation;
-
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -27,11 +24,11 @@ class FilmMakerCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(config('cinema-catalog-backpack.film_maker_model_namespace'));
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/film_maker');
+        CRUD::setModel(config('cinema-catalog.project_collection_model_namespace'));
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/project_collection');
         CRUD::setEntityNameStrings(
-            __('cinema-catalog-backpack::backpack.film_maker'),
-            __('cinema-catalog-backpack::backpack.film_makers')
+            __('cinema-catalog::backpack.project_collection'),
+            __('cinema-catalog::backpack.project_collections')
         );
     }
 
@@ -44,24 +41,25 @@ class FilmMakerCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::addColumn([
-            'name' => 'image_file_path',
-            'label' => __('cinema-catalog-backpack::backpack.image'),
+            'name' => 'poster_file_path',
+            'label' => __('cinema-catalog::backpack.poster'),
             'type' => 'image',
             'withFiles' => [
                 'disk' => 'public',
-                'path' => config('cinema-catalog-backpack.film_makers_folder_name'),
+                'path' => config('cinema-catalog.project_collections_folder_name'),
             ],
         ]);
+        CRUD:
 
         CRUD::addColumn([
-            'name' => 'name',
-            'label' => __('cinema-catalog-backpack::backpack.name'),
+            'name' => 'title',
+            'label' => __('cinema-catalog::backpack.title'),
             'type' => 'text'
         ]);
 
         CRUD::addColumn([
             'name' => 'is_public',
-            'label' => __('cinema-catalog-backpack::backpack.is_public_m'),
+            'label' => __('cinema-catalog::backpack.is_public_m'),
             'type' => 'checkbox'
         ]);
     }
@@ -86,48 +84,53 @@ class FilmMakerCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation([
-            'name' => 'required',
+            'title' => 'required',
         ]);
 
         CRUD::addField([
-            'name' => 'name',
-            'label' => __('cinema-catalog-backpack::backpack.name'),
+            'name' => 'title',
+            'label' => __('cinema-catalog::backpack.title'),
             'type' => 'text'
         ]);
 
         CRUD::addField([
             'name' => 'description',
-            'label' => __('cinema-catalog-backpack::backpack.description'),
+            'label' => __('cinema-catalog::backpack.description'),
             'type' => 'wysiwyg'
         ]);
 
         CRUD::addField([
-            'name' => 'image_file_path',
-            'label' => __('cinema-catalog-backpack::backpack.image'),
+            'name' => 'poster_file_path',
+            'label' => __('cinema-catalog::backpack.poster'),
             'type' => 'image',
             'withFiles' => [
                 'disk' => 'public',
-                'path' => config('cinema-catalog-backpack.film_makers_folder_name'),
+                'path' => config('cinema-catalog.project_collections_folder_name'),
             ],
         ]);
-
         CRUD::addField([
-            'name' => 'image_caption',
-            'label' => __('cinema-catalog-backpack::backpack.caption'),
-            'type' => 'text'
+            'name' => 'image_file_path',
+            'label' => __('cinema-catalog::backpack.image'),
+            'type' => 'image',
+            'withFiles' => [
+                'disk' => 'public',
+                'path' => config('cinema-catalog.project_collections_folder_name'),
+            ],
+
+
         ]);
 
 
         CRUD::addField([
             'name' => 'is_public',
-            'label' => __('cinema-catalog-backpack::backpack.is_public_m'),
+            'label' => __('cinema-catalog::backpack.is_public_m'),
             'type' => 'checkbox'
         ]);
     }
 
     protected function setupReorderOperation()
     {
-        CRUD::set('reorder.label', 'name');
+        CRUD::set('reorder.label', 'title');
         CRUD::set('reorder.max_level', 1);
     }
 }

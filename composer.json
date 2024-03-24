@@ -9,13 +9,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "NumaxLab\\CinemaCatalogBackpack\\": "src/"
+            "NumaxLab\\CinemaCatalog\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "NumaxLab\\CinemaCatalogBackpack\\Providers\\CinemaCatalogBackpackServiceProvider"
+                "NumaxLab\\CinemaCatalog\\Providers\\CinemaCatalogServiceProvider"
             ]
         }
     },
@@ -27,5 +27,5 @@
             "name": "Noa García Amado"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace NumaxLab\CinemaCatalogBackpack\Http\Controllers;
+namespace NumaxLab\CinemaCatalog\Http\Controllers\Backpack;
 
 
 use App\Http\Requests\SessionRequest;
@@ -27,11 +27,11 @@ class SessionCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(config('cinema-catalog-backpack.session_model_namespace'));
+        CRUD::setModel(config('cinema-catalog.session_model_namespace'));
         CRUD::setRoute(config('backpack.base.route_prefix') . '/session');
         CRUD::setEntityNameStrings(
-            __('cinema-catalog-backpack::backpack.session'),
-            __('cinema-catalog-backpack::backpack.sessions')
+            __('cinema-catalog::backpack.session'),
+            __('cinema-catalog::backpack.sessions')
         );
     }
 
@@ -46,24 +46,24 @@ class SessionCrudController extends CrudController
         CRUD::addColumn([
             'name' => 'project',
             'type' => "relationship",
-            'label' => __('cinema-catalog-backpack::backpack.film'),
+            'label' => __('cinema-catalog::backpack.film'),
 
         ]);
         CRUD::addColumn([
             'name' => 'cinema',
             'type' => "relationship",
-            'label' => __('cinema-catalog-backpack::backpack.cinema'),
+            'label' => __('cinema-catalog::backpack.cinema'),
 
         ]);
         CRUD::addColumn([
             'name' => 'date',
             'type' => "datetime",
-            'label' => __('cinema-catalog-backpack::backpack.date'),
+            'label' => __('cinema-catalog::backpack.date'),
 
         ]);
         CRUD::addColumn([
             'name' => 'is_public',
-            'label' => __('cinema-catalog-backpack::backpack.is_public_f'),
+            'label' => __('cinema-catalog::backpack.is_public_f'),
             'type' => 'checkbox'
         ]);
     }
@@ -96,31 +96,31 @@ class SessionCrudController extends CrudController
         CRUD::addField([
             'name' => 'project',
             'type' => "relationship",
-            'label' => __('cinema-catalog-backpack::backpack.film'),
+            'label' => __('cinema-catalog::backpack.film'),
 
         ]);
 
         CRUD::addField([
             'name' => 'date',
-            'label' => __('cinema-catalog-backpack::backpack.date'),
+            'label' => __('cinema-catalog::backpack.date'),
             'type' => 'datetime'
         ]);
 
         CRUD::addField([
             'name' => 'cinema',
             'type' => "relationship",
-            'label' => __('cinema-catalog-backpack::backpack.cinema'),
+            'label' => __('cinema-catalog::backpack.cinema'),
 
         ]);
         CRUD::addField([
             'name' => 'purchase_link',
-            'label' => __('cinema-catalog-backpack::backpack.purchase_link'),
+            'label' => __('cinema-catalog::backpack.purchase_link'),
             'type' => 'text'
         ]);
 
         CRUD::addField([
             'name' => 'is_public',
-            'label' => __('cinema-catalog-backpack::backpack.is_public_f'),
+            'label' => __('cinema-catalog::backpack.is_public_f'),
             'type' => 'checkbox'
         ]);
     }

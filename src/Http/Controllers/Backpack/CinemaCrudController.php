@@ -1,6 +1,6 @@
 <?php
 
-namespace NumaxLab\CinemaCatalogBackpack\Http\Controllers;
+namespace NumaxLab\CinemaCatalog\Http\Controllers\Backpack;
 
 use App\Http\Requests\CinemaRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
@@ -25,11 +25,11 @@ class CinemaCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(config('cinema-catalog-backpack.cinema_model_namespace'));
+        CRUD::setModel(config('cinema-catalog.cinema_model_namespace'));
         CRUD::setRoute(config('backpack.base.route_prefix') . '/cinema');
         CRUD::setEntityNameStrings(
-            __('cinema-catalog-backpack::backpack.cinema'),
-            __('cinema-catalog-backpack::backpack.cinemas')
+            __('cinema-catalog::backpack.cinema'),
+            __('cinema-catalog::backpack.cinemas')
         );
     }
 
@@ -47,25 +47,25 @@ class CinemaCrudController extends CrudController
             'type' => 'image',
             'withFiles' => [
                 'disk' => 'public',
-                'path' => config('cinema-catalog-backpack.cinemas_folder_name'),
+                'path' => config('cinema-catalog.cinemas_folder_name'),
             ],
         ]);
 
 
         CRUD::addColumn([
             'name' => 'name',
-            'label' => __('cinema-catalog-backpack::backpack.name'),
+            'label' => __('cinema-catalog::backpack.name'),
             'type' => 'text'
         ]);
         CRUD::addColumn([
             'name' => 'city',
-            'label' => __('cinema-catalog-backpack::backpack.address.city'),
+            'label' => __('cinema-catalog::backpack.address.city'),
             'type' => 'text'
         ]);
 
         CRUD::addColumn([
             'name' => 'is_public',
-            'label' => __('cinema-catalog-backpack::backpack.is_public_m'),
+            'label' => __('cinema-catalog::backpack.is_public_m'),
             'type' => 'checkbox'
         ]);
     }
@@ -97,12 +97,12 @@ class CinemaCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'name',
-            'label' => __('cinema-catalog-backpack::backpack.name'),
+            'label' => __('cinema-catalog::backpack.name'),
             'type' => 'text'
         ]);
         CRUD::addField([
             'name' => 'city',
-            'label' => __('cinema-catalog-backpack::backpack.address.city'),
+            'label' => __('cinema-catalog::backpack.address.city'),
             'type' => 'text'
         ]);
 
@@ -113,20 +113,20 @@ class CinemaCrudController extends CrudController
             'type' => 'image',
             'withFiles' => [
                 'disk' => 'public',
-                'path' => config('cinema-catalog-backpack.cinemas_folder_name'),
+                'path' => config('cinema-catalog.cinemas_folder_name'),
             ],
         ]);
 
 
         CRUD::addField([
             'name' => 'web_url',
-            'label' => __('cinema-catalog-backpack::backpack.url'),
+            'label' => __('cinema-catalog::backpack.url'),
             'type' => 'text'
         ]);
 
         CRUD::addfield([
             'name' => 'address',
-            'label' => __('cinema-catalog-backpack::backpack.address.label'),
+            'label' => __('cinema-catalog::backpack.address.label'),
             'type' => 'repeatable',
             'subfields' => [
 
@@ -134,42 +134,42 @@ class CinemaCrudController extends CrudController
                 [
                     'name' => 'street',
                     'type' => 'text',
-                    'label' => __('cinema-catalog-backpack::backpack.address.street'),
+                    'label' => __('cinema-catalog::backpack.address.street'),
                     'wrapper' => ['class' => 'form-group col-md-8']
 
                 ],
                 [
                     'name' => 'number',
                     'type' => 'number',
-                    'label' => __('cinema-catalog-backpack::backpack.address.number'),
+                    'label' => __('cinema-catalog::backpack.address.number'),
                     'wrapper' => ['class' => 'form-group col-md-2']
 
                 ],
                 [
                     'name' => 'floor',
                     'type' => 'text',
-                    'label' => __('cinema-catalog-backpack::backpack.address.floor'),
+                    'label' => __('cinema-catalog::backpack.address.floor'),
                     'wrapper' => ['class' => 'form-group col-md-2']
 
                 ],
                 [
                     'name' => 'postal_code',
                     'type' => 'number',
-                    'label' => __('cinema-catalog-backpack::backpack.address.postal_code'),
+                    'label' => __('cinema-catalog::backpack.address.postal_code'),
                     'wrapper' => ['class' => 'form-group col-md-2']
 
                 ],
                 [
                     'name' => 'city',
                     'type' => 'text',
-                    'label' => __('cinema-catalog-backpack::backpack.address.city'),
+                    'label' => __('cinema-catalog::backpack.address.city'),
                     'wrapper' => ['class' => 'form-group col-md-5']
 
                 ],
                 [
                     'name' => 'prvince',
                     'type' => 'text',
-                    'label' => __('cinema-catalog-backpack::backpack.address.province'),
+                    'label' => __('cinema-catalog::backpack.address.province'),
                     'wrapper' => ['class' => 'form-group col-md-5']
 
                 ],
@@ -177,27 +177,27 @@ class CinemaCrudController extends CrudController
             ],
             'init_rows' => 1,
             'max_rows' => 1,
-            'new_item_label' => __('cinema-catalog-backpack::backpack.add_element'),
+            'new_item_label' => __('cinema-catalog::backpack.add_element'),
 
         ]);
 
         CRUD::addfield([
             'name' => 'coordinates',
-            'label' => __('cinema-catalog-backpack::backpack.address.coordinates'),
+            'label' => __('cinema-catalog::backpack.address.coordinates'),
             'type' => 'repeatable',
             'subfields' => [
 
                 [
                     'name' => 'latitude',
                     'type' => 'text',
-                    'label' => __('cinema-catalog-backpack::backpack.address.latitude'),
+                    'label' => __('cinema-catalog::backpack.address.latitude'),
                     'wrapper' => ['class' => 'form-group col-md-6']
 
                 ],
                 [
                     'name' => 'longitude',
                     'type' => 'text',
-                    'label' => __('cinema-catalog-backpack::backpack.address.longitude'),
+                    'label' => __('cinema-catalog::backpack.address.longitude'),
                     'wrapper' => ['class' => 'form-group col-md-6']
 
 
@@ -211,7 +211,7 @@ class CinemaCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'is_public',
-            'label' => __('cinema-catalog-backpack::backpack.is_public_m'),
+            'label' => __('cinema-catalog::backpack.is_public_m'),
             'type' => 'checkbox'
         ]);
     }

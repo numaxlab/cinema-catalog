@@ -1,6 +1,6 @@
 <?php
 
-namespace NumaxLab\CinemaCatalogBackpack\Models;
+namespace NumaxLab\CinemaCatalog\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;

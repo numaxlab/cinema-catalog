@@ -1,8 +1,6 @@
 <?php
 
-
 return [
-
     'title' => 'Titulo',
     'name' => 'Nome',
     'description' => 'Descrición',
@@ -25,7 +23,7 @@ return [
     'artistic_info' => 'Información artística',
     'is_public_m' => 'Público',
     'is_public_f' => 'Pública',
-    'sponsors' => 'Colaboración',
+    'sponsors' => 'Colaboracións',
     'url' => 'Ligazón',
     'purchase_link' => 'Ligazón de compra',
     'type' => 'Tipo',
@@ -42,9 +40,8 @@ return [
     'sessions' => 'Sesións',
     'film_maker' => 'Cineasta',
     'film_makers' => 'Cineastas',
-    'project_collection' => 'Ciclo de cine',
-    'project_collections' => 'Ciclos de cine',
-
+    'project_collection' => 'Ciclo',
+    'project_collections' => 'Ciclos',
 
     'address' => [
         'label' => 'Dirección',
@@ -57,10 +54,7 @@ return [
         'coordinates' => 'Coordenadas',
         'latitude' => 'Latitude',
         'longitude' => 'Lonxitude',
-
-
     ],
-
 
     'projects_status' => [
         'development' => 'Desenvolvemento',
@@ -86,7 +80,6 @@ return [
         'audio' => 'Son',
     ],
 
-
     'default_project_artistic_info' => [
         'script' => 'Guión',
         'interpreters' => 'Intérpteses',
@@ -99,6 +92,4 @@ return [
         'production_direction' => 'Direción de produción',
         'distribution' => 'Distribución',
     ]
-
-
 ];

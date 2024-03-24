@@ -14,7 +14,7 @@ Route::group([
         (array)config('backpack.base.web_middleware', 'web'),
         (array)config('backpack.base.middleware_key', 'admin')
     ),
-    'namespace' => 'NumaxLab\CinemaCatalogBackpack\Http\Controllers',
+    'namespace' => 'NumaxLab\CinemaCatalog\Http\Controllers\Backpack',
 
 ], function () { // custom admin routes
     Route::crud('project', 'ProjectCrudController');
