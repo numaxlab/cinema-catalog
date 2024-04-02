@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->string('poster_file_path')->nullable();
             $table->string('main_image_file_path')->nullable();
             $table->json('gallery_files_paths')->nullable();
+            $table->string('trailer')->nullable();
             $table->json('awards')->nullable();
             $table->json('festivals')->nullable();
             $table->string('status')->nullable();
