@@ -18,6 +18,7 @@ class Session extends Model
         'purchase_link',
         'project_id',
         'cinema_id',
+        'is_public'
     ];
 
     public function cinema(): BelongsTo

@@ -72,6 +72,7 @@ return [
     'default_project_tech_info' => [
         'release_date' => 'Data de estrea',
         'gender' => 'Xénero',
+        'format' => 'Formato',
         'production_country' => 'País de produción principal',
         'languages' => 'Idiomas',
         'color' => 'Cor',

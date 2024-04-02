@@ -72,6 +72,7 @@ return [
     'default_project_tech_info' => [
         'release_date' => 'Release date',
         'gender' => 'Gender',
+        'format' => 'Format',
         'production_country' => 'Production country',
         'languages' => 'Languages',
         'color' => 'Color',

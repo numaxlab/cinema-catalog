@@ -121,6 +121,15 @@ class ProjectCollectionCrudController extends CrudController
         ]);
 
 
+        {
+            CRUD::addField([   // relationship
+                'name' => 'projects',
+                'type' => "relationship",
+                'label' => __('cinema-catalog::backpack.projects'),
+
+            ]);
+        }
+
         CRUD::addField([
             'name' => 'is_public',
             'label' => __('cinema-catalog::backpack.is_public_m'),

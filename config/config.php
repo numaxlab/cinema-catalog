@@ -13,6 +13,7 @@ return [
     'default_project_tech_info' => [
         'cinema-catalog::backpack.default_project_tech_info.release_date',
         'cinema-catalog::backpack.default_project_tech_info.gender',
+        'cinema-catalog::backpack.default_project_tech_info.format',
         'cinema-catalog::backpack.default_project_tech_info.production_country',
         'cinema-catalog::backpack.default_project_tech_info.languages',
         'cinema-catalog::backpack.default_project_tech_info.color',
