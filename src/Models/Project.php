@@ -25,7 +25,7 @@ class Project extends Model
     public const STATUS_DISTRIBUTION = 'distribution';
     public const TYPE_FEATURE_FILM = 'feature-film';
     public const TYPE_SHORT_FILM = 'short-film';
-    public const TYPE_OTHER = 'otherº';
+    public const TYPE_OTHER = 'other';
 
 
     protected $fillable = [
@@ -48,7 +48,8 @@ class Project extends Model
         'length',
         'is_public',
         'project_collection_id',
-        'type'
+        'type',
+        'trailer'
     ];
 
     protected $translatable = [
