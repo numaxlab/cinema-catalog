@@ -42,6 +42,8 @@ return [
     'film_makers' => 'Cineastas',
     'project_collection' => 'Ciclo',
     'project_collections' => 'Ciclos',
+    'events' => 'Eventos',
+
 
     'address' => [
         'label' => 'Enderezo',

@@ -42,6 +42,7 @@ return [
     'film_makers' => 'Film makers',
     'project_collection' => 'Project collection',
     'project_collections' => 'Project collections',
+    'events' => 'Events',
 
     'address' => [
         'label' => 'Address',

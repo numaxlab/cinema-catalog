@@ -206,6 +206,14 @@ class ProjectCrudController extends CrudController
             'type' => 'ckeditor',
         ]);
 
+
+        CRUD::addField([
+            'name' => 'trailer',
+            'label' => 'Trailer',
+            'type' => 'textarea'
+        ]);
+
+
         CRUD::addField([
             'name' => 'poster_file_path',
             'label' => __('cinema-catalog::backpack.poster'),
@@ -290,7 +298,7 @@ class ProjectCrudController extends CrudController
 
             'new_item_label' => __('cinema-catalog::backpack.add_element'),
             'reorder' => true,
-            'wrapper' => ['class' => 'form-group col-md-6']
+            'tab' => __('cinema-catalog::backpack.events')
 
         ]);
 
@@ -332,7 +340,7 @@ class ProjectCrudController extends CrudController
 
             'new_item_label' => __('cinema-catalog::backpack.add_element'),
             'reorder' => true,
-            'wrapper' => ['class' => 'form-group col-md-6']
+            'tab' => __('cinema-catalog::backpack.events')
 
         ]);
 
@@ -434,6 +442,82 @@ class ProjectCrudController extends CrudController
             'new_item_label' => __('cinema-catalog::backpack.add_element'),
             'reorder' => true,
             'tab' => __('cinema-catalog::backpack.sponsors')
+
+        ]);
+
+
+        CRUD::addfield([
+            'name' => 'festivals',
+            'label' => __('cinema-catalog::backpack.festivals'),
+            'type' => 'repeatable',
+            'subfields' => [
+                [
+                    'name' => 'title',
+                    'type' => 'text',
+                    'label' => __('cinema-catalog::backpack.title'),
+                ],
+                [
+                    'name' => 'ano',
+                    'type' => 'number',
+                    'label' => __('cinema-catalog::backpack.year'),
+                ],
+
+
+                [
+                    'name' => 'logo',
+                    'label' => 'Logo',
+                    'type' => 'text',
+
+                ],
+
+            ],
+            'init_rows' => 1,
+
+            'new_item_label' => __('cinema-catalog::backpack.add_element'),
+            'reorder' => true,
+            'tab' => __('cinema-catalog::backpack.events')
+
+        ]);
+
+        CRUD::addfield([
+            'name' => 'awards',
+            'label' => __('cinema-catalog::backpack.awards'),
+            'type' => 'repeatable',
+            'subfields' => [
+
+                [
+                    'name' => 'title',
+                    'type' => 'text',
+                    'label' => __('cinema-catalog::backpack.title'),
+                ],
+
+                [
+                    'name' => 'ano',
+                    'type' => 'number',
+                    'label' => __('cinema-catalog::backpack.year'),
+                ],
+                [
+                    'name' => 'logo',
+                    'label' => 'Logo',
+                    'type' => 'text',
+
+                ]
+                /*[
+                    'name' => 'logo',
+                    'label' => 'Logo',
+                    'type' => 'image',
+                    'withFiles' => [
+                        'disk' => 'public',
+                'path' => config('cinema-catalog.projects_folder_name'),
+                    ],
+                ]*/
+
+            ],
+            'init_rows' => 1,
+
+            'new_item_label' => __('cinema-catalog::backpack.add_element'),
+            'reorder' => true,
+            'tab' => __('cinema-catalog::backpack.events')
 
         ]);
 
