@@ -10,7 +10,7 @@ class CinemaCatalogServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../../config/config.php' => config_path('backpack/cinema-catalog.php'),
+            __DIR__ . '/../../config/config.php' => config_path('cinema-catalog.php'),
             __DIR__ . '/../../lang' => $this->app->langPath('vendor/cinema-catalog'),
         ]);
 

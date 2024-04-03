@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'include_project_collections' => true,
+    'include_project_collections' => false,
     'include_sessions' => true,
 
     'project_model_namespace' => \NumaxLab\CinemaCatalog\Models\Project::class,
