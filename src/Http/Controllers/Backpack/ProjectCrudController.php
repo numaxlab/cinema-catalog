@@ -295,16 +295,18 @@ class ProjectCrudController extends CrudController
         ]);
 
 
-        //realtionship director filmmaker
-        CRUD::addField([   // relationship
-            'name' => 'film_makers',
-            'type' => "relationship",
-            'label' => __('cinema-catalog::backpack.direction'),
-            'tab' => __('cinema-catalog::backpack.artistic_info')
+        if (config('cinema-catalog.include_film_makers')
+        ) {
+            //realtionship director filmmaker
+            CRUD::addField([   // relationship
+                'name' => 'film_makers',
+                'type' => "relationship",
+                'label' => __('cinema-catalog::backpack.direction'),
+                'tab' => __('cinema-catalog::backpack.artistic_info')
 
 
-        ]);
-
+            ]);
+        }
 
         CRUD::addfield([
             'name' => 'artistic_info',

@@ -36,12 +36,14 @@ class Install extends Command
                     'cinema-catalog::backpack.projects'
                 ) . '" icon="la la-film" :link="backpack_url(\'project\')"/>',
         ]);
-        $this->executeArtisanProcess('backpack:add-menu-content', [
-            'code' => '<x-backpack::menu-item title="' . __(
-                    'cinema-catalog::backpack.film_makers'
-                ) . '" icon="la la-users" :link="backpack_url(\'film_maker\')"/>'
-        ]);
 
+        if (config('cinema-catalog.include_film_makers')) {
+            $this->executeArtisanProcess('backpack:add-menu-content', [
+                'code' => '<x-backpack::menu-item title="' . __(
+                        'cinema-catalog::backpack.film_makers'
+                    ) . '" icon="la la-users" :link="backpack_url(\'film_maker\')"/>'
+            ]);
+        }
         if (config('cinema-catalog.include_project_collections')) {
             $this->executeArtisanProcess('backpack:add-menu-content', [
                 'code' => '<x-backpack::menu-item title="' . __(
