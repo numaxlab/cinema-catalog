@@ -83,6 +83,7 @@ return [
     ],
 
     'default_project_artistic_info' => [
+        'direction' => 'Direction',
         'script' => 'Script',
         'interpreters' => 'Interpreters',
         'photo' => 'Photo',

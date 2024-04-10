@@ -84,6 +84,7 @@ return [
     ],
 
     'default_project_artistic_info' => [
+        'direction' => 'Dirección',
         'script' => 'Guión',
         'interpreters' => 'Intérpretes',
         'photo' => 'Fotografía',

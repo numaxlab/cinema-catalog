@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'include_film_makers' => false,
+    'include_film_makers' => true,
     'include_project_collections' => true,
     'include_sessions' => true,
 
@@ -24,6 +24,8 @@ return [
     ],
 
     'default_project_artistic_info' => [
+        //in case you won't include Film Makers model in you project:
+        //'cinema-catalog::backpack.default_project_artistic_info.direction',
         'cinema-catalog::backpack.default_project_artistic_info.script',
         'cinema-catalog::backpack.default_project_artistic_info.interpreters',
         'cinema-catalog::backpack.default_project_artistic_info.photo',
