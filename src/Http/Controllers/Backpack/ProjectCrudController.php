@@ -447,6 +447,31 @@ class ProjectCrudController extends CrudController
         ]);
 
 
+        CRUD::addfield([
+            'name' => 'attachments',
+            'label' => __('cinema-catalog::backpack.attachments'),
+            'type' => 'repeatable',
+            'subfields' => [
+
+                [
+                    'name' => 'name',
+                    'type' => 'text',
+                    'label' => __('cinema-catalog::backpack.name'),
+                ],
+                [
+                    'name' => 'title',
+                    'type' => 'upload',
+                    'label' => __('cinema-catalog::backpack.attachments'),
+                ],
+
+
+            ],
+            'new_item_label' => __('cinema-catalog::backpack.add_element'),
+            'reorder' => true,
+
+        ]);
+
+
         CRUD::addField([
             'name' => 'is_public',
             'label' => __('cinema-catalog::backpack.is_public_m'),

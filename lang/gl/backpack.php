@@ -43,6 +43,7 @@ return [
     'project_collection' => 'Ciclo',
     'project_collections' => 'Ciclos',
     'events' => 'Eventos',
+    'attachments' => 'Adxuntos',
 
 
     'address' => [
