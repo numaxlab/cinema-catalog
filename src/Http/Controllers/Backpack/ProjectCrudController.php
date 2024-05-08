@@ -336,9 +336,15 @@ class ProjectCrudController extends CrudController
 
         CRUD::addfield([
             'name' => 'sponsors',
-            'label' => 'Colaboración',
+            'label' => __('cinema-catalog::backpack.sponsors'),
             'type' => 'repeatable',
             'subfields' => [
+                [
+                    'name' => 'type',
+                    'type' => 'text',
+                    'label' => __('cinema-catalog::backpack.type'),
+                ],
+
                 [
                     'name' => 'name',
                     'type' => 'text',
@@ -357,11 +363,6 @@ class ProjectCrudController extends CrudController
                     'type' => 'text',
 
                 ],
-                [
-                    'name' => 'type',
-                    'type' => 'text',
-                    'label' => __('cinema-catalog::backpack.type'),
-                ]
 
             ],
             'new_item_label' => __('cinema-catalog::backpack.add_element'),
@@ -381,18 +382,18 @@ class ProjectCrudController extends CrudController
                     'type' => 'text',
                     'label' => __('cinema-catalog::backpack.title'),
                 ],
+
+                [
+                    'name' => 'year',
+                    'type' => 'number',
+                    'label' => __('cinema-catalog::backpack.year'),
+                ],
                 [
                     'name' => 'description',
                     'label' => __('cinema-catalog::backpack.small-description'),
                     'type' => 'text',
 
                 ],
-                [
-                    'name' => 'year',
-                    'type' => 'number',
-                    'label' => __('cinema-catalog::backpack.year'),
-                ],
-
 
                 [
                     'name' => 'logo',
@@ -459,6 +460,38 @@ class ProjectCrudController extends CrudController
 
         ]);
 
+        CRUD::addfield([
+            'name' => 'reviews',
+            'label' => __('cinema-catalog::backpack.reviews'),
+            'type' => 'repeatable',
+            'subfields' => [
+
+                [
+                    'name' => 'content',
+                    'type' => 'textarea',
+                    'label' => __('cinema-catalog::backpack.content'),
+                ],
+
+                [
+                    'name' => 'author',
+                    'type' => 'text',
+                    'label' => __('cinema-catalog::backpack.author'),
+                ],
+                [
+                    'name' => 'media',
+                    'label' => __('cinema-catalog::backpack.media'),
+                    'type' => 'text',
+
+                ],
+
+
+            ],
+            'init_rows' => 1,
+            'new_item_label' => __('cinema-catalog::backpack.add_element'),
+            'reorder' => true,
+            'tab' => __('cinema-catalog::backpack.reviews')
+
+        ]);
 
         CRUD::addfield([
             'name' => 'attachments',

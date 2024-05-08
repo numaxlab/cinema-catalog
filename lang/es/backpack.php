@@ -2,6 +2,7 @@
 
 return [
     'title' => 'Titulo',
+    'content' => 'Contenido',
     'name' => 'Nombre',
     'description' => 'Descrición',
     'original_title' => 'Título original',
@@ -45,6 +46,9 @@ return [
     'events' => 'Eventos',
     'attachments' => 'Adjuntos',
     'small-description' => 'Pequeña descripción',
+    'reviews' => 'Opiniones',
+    'author' => 'Autor/a',
+    'media' => 'Medio',
 
 
     'address' => [

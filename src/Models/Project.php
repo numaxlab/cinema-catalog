@@ -104,4 +104,75 @@ class Project extends Model
         return $this->hasMany(Session::class);
     }
 
+    public function getTechInfoAsArrayAttribute()
+    {
+        if ($this->tech_info) {
+            $tech_info = json_decode($this->tech_info, true);
+            return $tech_info;
+        }
+
+        return [];
+    }
+
+    public function getArtisticInfoAsArrayAttribute()
+    {
+        if ($this->artistic_info) {
+            $artistic_info = json_decode($this->artistic_info, true);
+            return $artistic_info;
+        }
+
+        return [];
+    }
+
+    public function getAwardsAsArrayAttribute()
+    {
+        if ($this->awards) {
+            $awards = json_decode($this->awards, true);
+            return $awards;
+        }
+
+        return [];
+    }
+
+    public function getFestivalsAsArrayAttribute()
+    {
+        if ($this->festivals) {
+            $festivals = json_decode($this->festivals, true);
+            return $festivals;
+        }
+
+        return [];
+    }
+
+
+    public function getSponsorsAsArrayAttribute()
+    {
+        if ($this->sponsors) {
+            $sponsors = json_decode($this->sponsors, true);
+            return $sponsors;
+        }
+
+        return [];
+    }
+
+    public function getAttachmentsAsArrayAttribute()
+    {
+        if ($this->attachments) {
+            $attachments = json_decode($this->attachments, true);
+            return $attachments;
+        }
+
+        return [];
+    }
+
+    public function getGalleryFilePathsAsArrayAttribute()
+    {
+        if ($this->gallery_files_paths) {
+            $gallery_file_paths = json_decode($this->gallery_files_paths, true);
+            return $gallery_file_paths;
+        }
+
+        return [];
+    }
+
 }
