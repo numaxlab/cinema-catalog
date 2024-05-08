@@ -44,6 +44,7 @@ return [
     'project_collections' => 'Ciclos',
     'events' => 'Eventos',
     'attachments' => 'Adjuntos',
+    'small-description' => 'Pequeña descripción',
 
 
     'address' => [

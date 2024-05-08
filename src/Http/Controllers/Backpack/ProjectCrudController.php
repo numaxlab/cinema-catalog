@@ -382,7 +382,13 @@ class ProjectCrudController extends CrudController
                     'label' => __('cinema-catalog::backpack.title'),
                 ],
                 [
-                    'name' => 'ano',
+                    'name' => 'description',
+                    'label' => __('cinema-catalog::backpack.small-description'),
+                    'type' => 'text',
+
+                ],
+                [
+                    'name' => 'year',
                     'type' => 'number',
                     'label' => __('cinema-catalog::backpack.year'),
                 ],
@@ -417,16 +423,23 @@ class ProjectCrudController extends CrudController
                 ],
 
                 [
-                    'name' => 'ano',
+                    'name' => 'year',
                     'type' => 'number',
                     'label' => __('cinema-catalog::backpack.year'),
+                ],
+                [
+                    'name' => 'description',
+                    'label' => __('cinema-catalog::backpack.small-description'),
+                    'type' => 'text',
+
                 ],
                 [
                     'name' => 'logo',
                     'label' => 'Logo',
                     'type' => 'text',
 
-                ]
+                ],
+
                 /*[
                     'name' => 'logo',
                     'label' => 'Logo',
