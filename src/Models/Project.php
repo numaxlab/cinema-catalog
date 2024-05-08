@@ -60,7 +60,8 @@ class Project extends Model
         'festivals',
         'artistic_info',
         'tech_info',
-        'reviews'
+        'reviews',
+        'attachments'
 
     ];
 
@@ -71,6 +72,9 @@ class Project extends Model
         'tech_info' => 'array',
         'artistic_info' => 'array',
         'gallery_files_paths' => 'array',
+        'sponsors' => 'array',
+        'attachments' => 'array',
+
     ];
 
 
