@@ -61,7 +61,8 @@ class Project extends Model
         'artistic_info',
         'tech_info',
         'reviews',
-        'attachments'
+        'attachments',
+        'sponsors'
 
     ];
 

@@ -467,12 +467,12 @@ class ProjectCrudController extends CrudController
             'subfields' => [
 
                 [
-                    'name' => 'name',
+                    'name' => 'title',
                     'type' => 'text',
-                    'label' => __('cinema-catalog::backpack.name'),
+                    'label' => __('cinema-catalog::backpack.title'),
                 ],
                 [
-                    'name' => 'title',
+                    'name' => 'document',
                     'type' => 'upload',
                     'label' => __('cinema-catalog::backpack.attachments'),
                 ],
