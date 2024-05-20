@@ -403,7 +403,6 @@ class ProjectCrudController extends CrudController
                 ],
 
             ],
-            'init_rows' => 1,
 
             'new_item_label' => __('cinema-catalog::backpack.add_element'),
             'reorder' => true,
@@ -452,7 +451,6 @@ class ProjectCrudController extends CrudController
                 ]*/
 
             ],
-            'init_rows' => 1,
 
             'new_item_label' => __('cinema-catalog::backpack.add_element'),
             'reorder' => true,
@@ -486,7 +484,6 @@ class ProjectCrudController extends CrudController
 
 
             ],
-            'init_rows' => 1,
             'new_item_label' => __('cinema-catalog::backpack.add_element'),
             'reorder' => true,
             'tab' => __('cinema-catalog::backpack.reviews')
