@@ -12,6 +12,7 @@ return [
     'status' => 'Estado',
     'synopsis' => 'Sinopsis',
     'poster' => 'Póster',
+    'trailer' => 'Tráiler',
     'image' => 'Imaxe',
     'main_image' => 'Imaxe principal',
     'images_gallery' => 'Galería de imaxes',

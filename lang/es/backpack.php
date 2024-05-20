@@ -16,6 +16,7 @@ return [
     'images_gallery' => 'Galería de imágenes',
     'add_image' => 'Añadir imagen',
     'poster' => 'Póster',
+    'trailer' => 'Tráiler',
     'caption' => 'Pie de foto',
     'festivals' => 'Festivales',
     'awards' => 'Premios',

@@ -12,6 +12,7 @@ return [
     'status' => 'Status',
     'synopsis' => 'Synopsis',
     'poster' => 'Poster',
+    'trailer' => 'Trailer',
     'image' => 'Image',
     'main_image' => 'Main image',
     'images_gallery' => 'Images gallery',
