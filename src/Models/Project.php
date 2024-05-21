@@ -175,4 +175,36 @@ class Project extends Model
         return [];
     }
 
+    public function getHumanStatusAttribute()
+    {
+        $status_array = [
+            Project::STATUS_DEVELOPMENT => __(
+                'cinema-catalog::backpack.projects_status.development'
+            ),
+            Project::STATUS_PRODUCTION => __('cinema-catalog::backpack.projects_status.production'),
+            Project::STATUS_POSTPRODUCTION => __(
+                'cinema-catalog::backpack.projects_status.postproduction'
+            ),
+            Project::STATUS_DISTRIBUTION => __('cinema-catalog::backpack.projects_status.distribution'),
+
+        ];
+
+        if ($this->status) {
+            return $status_array[$this->status];
+        }
+
+        return null;
+    }
+
+
+    public function getSponsorTypesSeparetlyAttribute()
+    {
+        if ($this->sponsors_as_array) {
+            $sponsors_collections = collect($this->sponsors_as_array)->groupBy('type');
+            return $sponsors_collections;
+        }
+
+        return null;
+    }
+
 }
