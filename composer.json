@@ -4,7 +4,8 @@
     "require": {
         "backpack/crud": "^6.4",
         "spatie/laravel-translatable": "^6.6",
-        "cviebrock/eloquent-sluggable": "^10.0"
+        "cviebrock/eloquent-sluggable": "^10.0",
+        "backpack/filemanager": "^3.0"
     },
     "license": "MIT",
     "autoload": {
