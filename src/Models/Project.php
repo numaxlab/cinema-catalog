@@ -62,7 +62,8 @@ class Project extends Model
         'tech_info',
         'reviews',
         'attachments',
-        'sponsors'
+        'sponsors',
+        'gallery_files_paths'
 
     ];
 
