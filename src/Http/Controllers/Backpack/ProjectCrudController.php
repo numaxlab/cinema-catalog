@@ -248,11 +248,7 @@ class ProjectCrudController extends CrudController
 
                     'name' => 'path',
                     'label' => __('cinema-catalog::backpack.image'),
-                    'type' => 'image',
-                    'withFiles' => [
-                        'disk' => 'public',
-                        'path' => config('cinema-catalog.projects_folder_name'),
-                    ]
+                    'type' => 'browse'
                 ],
 
                 [
@@ -360,7 +356,7 @@ class ProjectCrudController extends CrudController
                 [
                     'name' => 'logo',
                     'label' => 'Logo',
-                    'type' => 'text',
+                    'type' => 'browse',
 
                 ],
 
@@ -398,7 +394,7 @@ class ProjectCrudController extends CrudController
                 [
                     'name' => 'logo',
                     'label' => 'Logo',
-                    'type' => 'text',
+                    'type' => 'browse',
 
                 ],
 
@@ -436,19 +432,10 @@ class ProjectCrudController extends CrudController
                 [
                     'name' => 'logo',
                     'label' => 'Logo',
-                    'type' => 'text',
+                    'type' => 'browse',
 
                 ],
 
-                /*[
-                    'name' => 'logo',
-                    'label' => 'Logo',
-                    'type' => 'image',
-                    'withFiles' => [
-                        'disk' => 'public',
-                'path' => config('cinema-catalog.projects_folder_name'),
-                    ],
-                ]*/
 
             ],
 
