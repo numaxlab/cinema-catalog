@@ -490,11 +490,9 @@ class ProjectCrudController extends CrudController
                 ],
                 [
                     'name' => 'document',
-                    'type' => 'upload',
+                    'type' => 'browse',
                     'label' => __('cinema-catalog::backpack.attachments'),
                 ],
-
-
             ],
             'new_item_label' => __('cinema-catalog::backpack.add_element'),
             'reorder' => true,
