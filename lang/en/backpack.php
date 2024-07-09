@@ -16,7 +16,7 @@ return [
     'image' => 'Image',
     'main_image' => 'Main image',
     'images_gallery' => 'Images gallery',
-    'add_image' => 'Add iamge',
+    'add_image' => 'Add image',
     'caption' => 'Image caption',
     'festivals' => 'Festivals',
     'awards' => 'Awards',
