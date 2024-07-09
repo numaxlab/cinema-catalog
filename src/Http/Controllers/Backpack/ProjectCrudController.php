@@ -397,6 +397,11 @@ class ProjectCrudController extends CrudController
                     'type' => 'browse',
 
                 ],
+                [
+                    'name' => 'href',
+                    'label' => 'Enlace',
+                    'type' => 'url',
+                ],
 
             ],
 
@@ -434,6 +439,11 @@ class ProjectCrudController extends CrudController
                     'label' => 'Logo',
                     'type' => 'browse',
 
+                ],
+                [
+                    'name' => 'href',
+                    'label' => 'Enlace',
+                    'type' => 'url',
                 ],
 
 
