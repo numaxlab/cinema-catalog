@@ -153,9 +153,9 @@ class ProjectCrudController extends CrudController
             'label' => __('cinema-catalog::backpack.type'),
             'type' => 'select_from_array',
             'options' => [
-                Project::TYPE_FEATURE_FILM => 'Largometraxe',
-                Project::TYPE_SHORT_FILM => 'Curtametraxe',
-                Project::TYPE_OTHER => 'Outro',
+                Project::TYPE_FEATURE_FILM => __('cinema-catalog::backpack.projects_types.feature_film'),
+                Project::TYPE_SHORT_FILM => __('cinema-catalog::backpack.projects_types.short_film'),
+                Project::TYPE_OTHER => __('cinema-catalog::backpack.projects_types.other'),
 
             ],
         ]);
