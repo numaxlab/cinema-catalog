@@ -4,7 +4,8 @@ namespace NumaxLab\CinemaCatalog\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;
-use Cviebrock\EloquentSluggable\Sluggable;
+use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\Sluggable;
+use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -13,7 +14,7 @@ class ProjectCollection extends Model
 {
     use HasFactory;
     use HasTranslations;
-    use Sluggable;
+    use Sluggable, SluggableScopeHelpers;
     use CrudTrait;
 
 

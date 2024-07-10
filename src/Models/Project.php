@@ -5,7 +5,8 @@ namespace NumaxLab\CinemaCatalog\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\HasTranslations;
-use Cviebrock\EloquentSluggable\Sluggable;
+use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\Sluggable;
+use Backpack\CRUD\app\Models\Traits\SpatieTranslatable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -15,7 +16,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Project extends Model
 {
     use HasTranslations;
-    use Sluggable;
+    use Sluggable, SluggableScopeHelpers;
     use HasFactory;
     use CrudTrait;
 
