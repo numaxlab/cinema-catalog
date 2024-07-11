@@ -57,13 +57,6 @@ class ProjectCollectionCrudController extends CrudController
             'type' => 'text'
         ]);
 
-        CRUD::addField([   // Text
-            'name' => 'slug',
-            'target' => 'title',
-            'label' => "Slug",
-            'type' => 'slug',
-        ]);
-
 
         CRUD::addColumn([
             'name' => 'is_public',
@@ -100,6 +93,14 @@ class ProjectCollectionCrudController extends CrudController
             'label' => __('cinema-catalog::backpack.title'),
             'type' => 'text'
         ]);
+
+        CRUD::addField([   // Text
+            'name' => 'slug',
+            'target' => 'title',
+            'label' => "Slug",
+            'type' => 'slug',
+        ]);
+
 
         CRUD::addField([
             'name' => 'description',
