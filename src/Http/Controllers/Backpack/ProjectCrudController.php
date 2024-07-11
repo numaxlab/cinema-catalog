@@ -142,6 +142,14 @@ class ProjectCrudController extends CrudController
             'type' => 'text'
         ]);
 
+
+        CRUD::addField([   // Text
+            'name' => 'slug',
+            'target' => 'title',
+            'label' => "Slug",
+            'type' => 'slug',
+        ]);
+
         CRUD::addField([
             'name' => 'original_title',
             'label' => __('cinema-catalog::backpack.original_title'),

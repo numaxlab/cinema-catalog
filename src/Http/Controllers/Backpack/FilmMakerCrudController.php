@@ -59,6 +59,14 @@ class FilmMakerCrudController extends CrudController
             'type' => 'text'
         ]);
 
+        CRUD::addField([   // Text
+            'name' => 'slug',
+            'target' => 'name',
+            'label' => "Slug",
+            'type' => 'slug',
+        ]);
+
+
         CRUD::addColumn([
             'name' => 'is_public',
             'label' => __('cinema-catalog::backpack.is_public_m'),
