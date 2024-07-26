@@ -74,7 +74,7 @@ return [
 
     'projects_types' => [
         'feature_film' => 'Largometraje',
-        'short_film' => 'Corto',
+        'short_film' => 'Cortometraje',
         'other' => 'Otro'
     ],
 

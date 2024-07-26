@@ -44,6 +44,8 @@ class ProjectCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::column('id');
+
         CRUD::addColumn([
             'name' => 'title',
             'label' => __('cinema-catalog::backpack.title'),

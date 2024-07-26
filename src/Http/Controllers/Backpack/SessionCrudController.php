@@ -43,6 +43,8 @@ class SessionCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::column('id');
+
         CRUD::addColumn([
             'name' => 'project',
             'type' => "relationship",
