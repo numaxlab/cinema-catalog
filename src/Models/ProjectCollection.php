@@ -31,7 +31,6 @@ class ProjectCollection extends Model
         'title',
         'slug',
         'description',
-
     ];
 
 

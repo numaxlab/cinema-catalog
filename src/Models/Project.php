@@ -65,7 +65,6 @@ class Project extends Model
         'attachments',
         'sponsors',
         'gallery_files_paths'
-
     ];
 
 

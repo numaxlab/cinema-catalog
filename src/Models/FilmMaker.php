@@ -26,14 +26,12 @@ class FilmMaker extends Model
         'image_file_path',
         'image_caption',
         'is_public'
-
     ];
 
 
     protected $translatable = [
         'description',
         'image_caption',
-
     ];
 
     public function sluggable(): array

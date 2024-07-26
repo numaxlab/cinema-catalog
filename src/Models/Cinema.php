@@ -20,7 +20,6 @@ class Cinema extends Model
         'coordinates',
         'web_url',
         'is_public'
-
     ];
 
 
