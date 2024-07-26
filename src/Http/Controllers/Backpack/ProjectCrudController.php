@@ -100,12 +100,6 @@ class ProjectCrudController extends CrudController
         ]);
 
         CRUD::addColumn([
-            'name' => 'is_public',
-            'label' => __('cinema-catalog::backpack.is_public_m'),
-            'type' => 'check',
-        ]);
-
-        CRUD::addColumn([
             'name' => 'type',
             'label' => __('cinema-catalog::backpack.type'),
             'type' => 'select_from_array',
@@ -115,6 +109,12 @@ class ProjectCrudController extends CrudController
                 Project::TYPE_OTHER => __('cinema-catalog::backpack.projects_types.other'),
 
             ],
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'is_public',
+            'label' => __('cinema-catalog::backpack.is_public_m'),
+            'type' => 'check',
         ]);
     }
 
