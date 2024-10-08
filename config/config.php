@@ -41,5 +41,9 @@ return [
     'projects_folder_name' => 'proxectos',
     'film_makers_folder_name' => 'cineastas',
     'project_collections_folder_name' => 'ciclos',
-    'cinemas_folder_name' => 'cines'
+    'cinemas_folder_name' => 'cines',
+
+    'project_main_image_hint' => null,
+    'project_images_gallery_hint' => null,
+    'film_maker_image_hint' => null
 ];

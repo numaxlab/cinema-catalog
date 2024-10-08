@@ -20,6 +20,6 @@ Route::group([
     Route::crud('project', 'ProjectCrudController');
     Route::crud('cinema', 'CinemaCrudController');
     Route::crud('session', 'SessionCrudController');
-    Route::crud('film_maker', 'FilmMakerCrudController');
+    Route::crud('film-mmaker', 'FilmMakerCrudController');
     Route::crud('project_collection', 'ProjectCollectionCrudController');
 }); // this should be the absolute last line of this file

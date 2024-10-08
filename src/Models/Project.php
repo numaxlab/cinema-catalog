@@ -64,8 +64,6 @@ class Project extends Model
         'reviews',
         'attachments',
         'sponsors',
-        'gallery_files_paths'
-
     ];
 
 

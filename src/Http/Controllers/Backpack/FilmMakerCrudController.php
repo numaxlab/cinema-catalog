@@ -28,7 +28,7 @@ class FilmMakerCrudController extends CrudController
     public function setup()
     {
         CRUD::setModel(config('cinema-catalog.film_maker_model_namespace'));
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/film_maker');
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/film-maker');
         CRUD::setEntityNameStrings(
             __('cinema-catalog::backpack.film_maker'),
             __('cinema-catalog::backpack.film_makers')
@@ -116,6 +116,8 @@ class FilmMakerCrudController extends CrudController
                 'disk' => 'public',
                 'path' => config('cinema-catalog.film_makers_folder_name'),
             ],
+            'hint' => config('cinema-catalog.film_maker_image_hint')
+
         ]);
 
         CRUD::addField([
