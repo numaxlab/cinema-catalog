@@ -43,6 +43,8 @@ class FilmMakerCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::column('id');
+
         CRUD::addColumn([
             'name' => 'image_file_path',
             'label' => __('cinema-catalog::backpack.image'),
@@ -58,7 +60,6 @@ class FilmMakerCrudController extends CrudController
             'label' => __('cinema-catalog::backpack.name'),
             'type' => 'text'
         ]);
-
 
         CRUD::addColumn([
             'name' => 'is_public',

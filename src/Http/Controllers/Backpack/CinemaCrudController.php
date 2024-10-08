@@ -41,6 +41,8 @@ class CinemaCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::column('id');
+
         CRUD::addColumn([
             'name' => 'logo_file_path',
             'label' => 'Logo',
@@ -51,12 +53,12 @@ class CinemaCrudController extends CrudController
             ],
         ]);
 
-
         CRUD::addColumn([
             'name' => 'name',
             'label' => __('cinema-catalog::backpack.name'),
             'type' => 'text'
         ]);
+
         CRUD::addColumn([
             'name' => 'city',
             'label' => __('cinema-catalog::backpack.address.city'),

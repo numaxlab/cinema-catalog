@@ -44,43 +44,6 @@ class ProjectCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::addColumn([
-            'name' => 'title',
-            'label' => __('cinema-catalog::backpack.title'),
-            'type' => 'text'
-        ]);
-
-        CRUD::addColumn([
-            'name' => 'status',
-            'label' => __('cinema-catalog::backpack.status'),
-            'type' => 'select_from_array',
-            'options' => [
-                Project::STATUS_DEVELOPMENT => __(
-                    'cinema-catalog::backpack.projects_status.development'
-                ),
-                Project::STATUS_PRODUCTION => __('cinema-catalog::backpack.projects_status.production'),
-                Project::STATUS_POSTPRODUCTION => __(
-                    'cinema-catalog::backpack.projects_status.postproduction'
-                ),
-                Project::STATUS_DISTRIBUTION => __('cinema-catalog::backpack.projects_status.distribution'),
-
-            ],
-        ]);
-
-
-        CRUD::addColumn([
-            'name' => 'type',
-            'label' => __('cinema-catalog::backpack.type'),
-            'type' => 'select_from_array',
-            'options' => [
-                Project::TYPE_FEATURE_FILM => __('cinema-catalog::backpack.projects_types.feature_film'),
-                Project::TYPE_SHORT_FILM => __('cinema-catalog::backpack.projects_types.short_film'),
-                Project::TYPE_OTHER => __('cinema-catalog::backpack.projects_types.other'),
-
-            ],
-        ]);
-
-
         CRUD::filter('status')
             ->type('dropdown')
             ->label(__('cinema-catalog::backpack.status'))
@@ -110,6 +73,49 @@ class ProjectCrudController extends CrudController
             ->whenActive(function ($value) {
                 CRUD::addClause('where', 'type', $value);
             });
+
+        CRUD::column('id');
+
+        CRUD::addColumn([
+            'name' => 'title',
+            'label' => __('cinema-catalog::backpack.title'),
+            'type' => 'text'
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'status',
+            'label' => __('cinema-catalog::backpack.status'),
+            'type' => 'select_from_array',
+            'options' => [
+                Project::STATUS_DEVELOPMENT => __(
+                    'cinema-catalog::backpack.projects_status.development'
+                ),
+                Project::STATUS_PRODUCTION => __('cinema-catalog::backpack.projects_status.production'),
+                Project::STATUS_POSTPRODUCTION => __(
+                    'cinema-catalog::backpack.projects_status.postproduction'
+                ),
+                Project::STATUS_DISTRIBUTION => __('cinema-catalog::backpack.projects_status.distribution'),
+
+            ],
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'type',
+            'label' => __('cinema-catalog::backpack.type'),
+            'type' => 'select_from_array',
+            'options' => [
+                Project::TYPE_FEATURE_FILM => __('cinema-catalog::backpack.projects_types.feature_film'),
+                Project::TYPE_SHORT_FILM => __('cinema-catalog::backpack.projects_types.short_film'),
+                Project::TYPE_OTHER => __('cinema-catalog::backpack.projects_types.other'),
+
+            ],
+        ]);
+
+        CRUD::addColumn([
+            'name' => 'is_public',
+            'label' => __('cinema-catalog::backpack.is_public_m'),
+            'type' => 'check',
+        ]);
     }
 
     /**

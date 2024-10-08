@@ -40,6 +40,8 @@ class ProjectCollectionCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::column('id');
+
         CRUD::addColumn([
             'name' => 'poster_file_path',
             'label' => __('cinema-catalog::backpack.poster'),
@@ -49,7 +51,6 @@ class ProjectCollectionCrudController extends CrudController
                 'path' => config('cinema-catalog.project_collections_folder_name'),
             ],
         ]);
-        CRUD:
 
         CRUD::addColumn([
             'name' => 'title',
