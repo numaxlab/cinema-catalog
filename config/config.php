@@ -45,5 +45,6 @@ return [
 
     'project_main_image_hint' => null,
     'project_images_gallery_hint' => null,
-    'film_maker_image_hint' => null
+    'film_maker_image_hint' => null,
+    'event_logo_hint' => null
 ];
