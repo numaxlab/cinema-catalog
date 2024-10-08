@@ -407,7 +407,7 @@ class ProjectCrudController extends CrudController
                     'name' => 'logo',
                     'label' => 'Logo',
                     'type' => 'browse',
-                    'hint' => config('cinema-catalog.logo_hint'),
+                    'hint' => config('cinema-catalog.event_logo_hint'),
 
 
                 ],
@@ -452,7 +452,7 @@ class ProjectCrudController extends CrudController
                     'name' => 'logo',
                     'label' => 'Logo',
                     'type' => 'browse',
-                    'hint' => config('cinema-catalog.logo_hint'),
+                    'hint' => config('cinema-catalog.event_logo_hint'),
 
 
                 ],
