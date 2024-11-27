@@ -26,6 +26,8 @@
 - Para engadir columnas ao $casts
   `$this->mergeCasts(['labs']);`
 - Para engadir columnas ao $translatable -> Copiar e engadir o atributo
+- Cambiar o espacio de nomes na configuración do paquete ao do modelo do propio proxecto 
+
 
 ### Sobreescribir un controlador do CRUD
 
