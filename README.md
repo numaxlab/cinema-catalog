@@ -14,7 +14,7 @@
 
 - Crear modelo
 - Extender do modelo pai do paquete
-- Crear o controlador:
+- Crear o constructor:
   `    public function __construct(array $attributes = [])
   {
   parent::__construct($attributes);
