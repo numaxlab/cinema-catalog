@@ -14,7 +14,7 @@
 
 - Crear modelo
 - Extender do modelo pai do paquete
-- Crear o controlador:
+- Crear o constructor:
   `    public function __construct(array $attributes = [])
   {
   parent::__construct($attributes);
@@ -26,6 +26,8 @@
 - Para engadir columnas ao $casts
   `$this->mergeCasts(['labs']);`
 - Para engadir columnas ao $translatable -> Copiar e engadir o atributo
+- Cambiar o espacio de nomes na configuración do paquete ao do modelo do propio proxecto 
+
 
 ### Sobreescribir un controlador do CRUD
 
