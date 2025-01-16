@@ -50,6 +50,7 @@ return [
     'reviews' => 'Reviews',
     'author' => 'Author',
     'media' => 'Media',
+    'is_main' => 'Highlight',
 
 
     'address' => [

@@ -293,6 +293,11 @@ class ProjectCrudController extends CrudController
                     'type' => 'text',
                     'wrapper' => ['class' => 'form-group col-md-6']
                 ],
+                [
+                    'name' => 'is_main',
+                    'label' => __('cinema-catalog::backpack.is_main'),
+                    'type' => 'checkbox',
+                ],
             ],
             'new_item_label' => __('cinema-catalog::backpack.add_element'),
             'reorder' => true,

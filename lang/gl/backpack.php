@@ -50,6 +50,7 @@ return [
     'reviews' => 'Opinións',
     'author' => 'Autor/a',
     'media' => 'Medio',
+    'is_main' => 'Destacar',
 
 
     'address' => [
