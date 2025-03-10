@@ -67,10 +67,10 @@ return [
     ],
 
     'projects_status' => [
-        'development' => 'Desarrollo',
-        'production' => 'Producción',
-        'postproduction' => 'Postproducción',
-        'distribution' => 'Distribución'
+        'development' => 'En desarrollo',
+        'production' => 'En producción',
+        'postproduction' => 'En postproducción',
+        'distribution' => 'En distribución'
     ],
 
     'projects_types' => [
