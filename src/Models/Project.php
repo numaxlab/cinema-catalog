@@ -23,6 +23,7 @@ class Project extends Model
     public const STATUS_DEVELOPMENT = 'development';
     public const STATUS_PRODUCTION = 'production';
     public const STATUS_POSTPRODUCTION = 'postprodution';
+    public const STATUS_OTHER = 'other';
     public const STATUS_DISTRIBUTION = 'distribution';
     public const TYPE_FEATURE_FILM = 'feature-film';
     public const TYPE_SHORT_FILM = 'short-film';
@@ -50,7 +51,9 @@ class Project extends Model
         'is_public',
         'project_collection_id',
         'type',
-        'trailer'
+        'trailer',
+        'custom_type',
+        'custom_status'
     ];
 
     protected $translatable = [
@@ -64,6 +67,8 @@ class Project extends Model
         'reviews',
         'attachments',
         'sponsors',
+        'custom_type',
+        'custom_status'
     ];
 
 

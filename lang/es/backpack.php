@@ -10,6 +10,7 @@ return [
     'length' => 'Duración en minutos',
     'year' => 'Año',
     'status' => 'Estado',
+    'custom_status' => 'Estado personalizado',
     'synopsis' => 'Sinopsis',
     'image' => 'Imagen',
     'main_image' => 'Imagen principal',
@@ -29,6 +30,7 @@ return [
     'url' => 'Enlace',
     'purchase_link' => 'Ligazón de compra',
     'type' => 'Tipo',
+    'custom_type' => 'Tipo personalizado',
     'key' => 'Clave',
     'value' => 'Valor',
     'film' => 'Película',
@@ -70,7 +72,9 @@ return [
         'development' => 'En desarrollo',
         'production' => 'En producción',
         'postproduction' => 'En postproducción',
-        'distribution' => 'En distribución'
+        'distribution' => 'En distribución',
+        'other' => 'Otro'
+
     ],
 
     'projects_types' => [

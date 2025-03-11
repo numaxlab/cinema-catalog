@@ -10,6 +10,7 @@ return [
     'length' => 'Length',
     'year' => 'Year',
     'status' => 'Status',
+    'custom_status' => 'Custom status',
     'synopsis' => 'Synopsis',
     'poster' => 'Poster',
     'trailer' => 'Trailer',
@@ -29,6 +30,8 @@ return [
     'url' => 'Url',
     'purchase_link' => 'Ligazón de compra',
     'type' => 'Type',
+    'custom_type' => 'Custom type',
+
     'key' => 'Key',
     'value' => 'Value',
     'film' => 'Film',
@@ -70,7 +73,9 @@ return [
         'development' => 'Development',
         'production' => 'Production',
         'postproduction' => 'Postproduction',
-        'distribution' => 'Distribution'
+        'distribution' => 'Distribution',
+        'other' => 'Other'
+
     ],
 
     'projects_types' => [

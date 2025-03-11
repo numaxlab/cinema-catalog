@@ -95,6 +95,7 @@ class ProjectCrudController extends CrudController
                     'cinema-catalog::backpack.projects_status.postproduction'
                 ),
                 Project::STATUS_DISTRIBUTION => __('cinema-catalog::backpack.projects_status.distribution'),
+                Project::STATUS_OTHER => __('cinema-catalog::backpack.projects_status.other'),
 
             ],
         ]);
@@ -174,6 +175,13 @@ class ProjectCrudController extends CrudController
             ],
         ]);
 
+
+        CRUD::addField([
+            'name' => 'custom_type',
+            'label' => __('cinema-catalog::backpack.custom_type'),
+            'type' => 'text'
+        ]);
+
         CRUD::addField([
             'name' => 'length',
             'label' => __('cinema-catalog::backpack.length'),
@@ -199,7 +207,14 @@ class ProjectCrudController extends CrudController
                     'cinema-catalog::backpack.projects_status.postproduction'
                 ),
                 Project::STATUS_DISTRIBUTION => __('cinema-catalog::backpack.projects_status.distribution'),
+                Project::STATUS_OTHER => __('cinema-catalog::backpack.projects_status.other'),
             ],
+        ]);
+
+        CRUD::addField([
+            'name' => 'custom_status',
+            'label' => __('cinema-catalog::backpack.custom_status'),
+            'type' => 'text'
         ]);
 
         if (config('cinema-catalog.include_project_collections')
