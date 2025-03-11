@@ -202,6 +202,28 @@ class Project extends Model
     }
 
 
+    public function getHumanTypeAttribute()
+    {
+        $types_array = [
+            Project::TYPE_FEATURE_FILM => __(
+                'cinema-catalog::backpack.projects_types.feature_film'
+            ),
+            Project::TYPE_SHORT_FILM => __(
+                'cinema-catalog::backpack.projects_types.short_film'
+            ),
+            Project::TYPE_OTHER => __(
+                'cinema-catalog::backpack.projects_types.other'
+            ),
+
+        ];
+
+        if ($this->type) {
+            return $types_array[$this->type];
+        }
+
+        return null;
+    }
+
     public function getSponsorTypesSeparetlyAttribute()
     {
         if ($this->sponsors_as_array) {
