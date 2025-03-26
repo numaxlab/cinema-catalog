@@ -53,7 +53,8 @@ class Project extends Model
         'type',
         'trailer',
         'custom_type',
-        'custom_status'
+        'custom_status',
+        'highlight'
     ];
 
     protected $translatable = [

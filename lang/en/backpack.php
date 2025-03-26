@@ -54,6 +54,7 @@ return [
     'author' => 'Author',
     'media' => 'Media',
     'is_main' => 'Highlight',
+    'highlight-project' => 'Highlight project',
 
 
     'address' => [

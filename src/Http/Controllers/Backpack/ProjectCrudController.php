@@ -116,6 +116,18 @@ class ProjectCrudController extends CrudController
             'name' => 'is_public',
             'label' => __('cinema-catalog::backpack.is_public_m'),
             'type' => 'check',
+            'wrapper' => ['class' => 'form-group col-md-6']
+
+        ]);
+
+
+        CRUD::addField([
+            'name' => 'highlight',
+            'label' => __('cinema-catalog::backpack.highlight_project'),
+            'type' => 'boolean',
+            'wrapper' => ['class' => 'form-group col-md-6']
+
+
         ]);
     }
 

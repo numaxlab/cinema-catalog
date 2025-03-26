@@ -53,6 +53,7 @@ return [
     'author' => 'Autor/a',
     'media' => 'Medio',
     'is_main' => 'Destacar',
+    'highlight-project' => 'Destacar proyecto',
 
 
     'address' => [
