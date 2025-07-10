@@ -57,7 +57,7 @@ class Project extends Model
         'highlight'
     ];
 
-    protected $translatable = [
+    public $translatable = [
         'title',
         'slug',
         'synopsis',
