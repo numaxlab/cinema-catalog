@@ -370,6 +370,33 @@ class ProjectCrudController extends CrudController
 
 
         CRUD::addfield([
+            'name' => 'cast',
+            'label' => __('cinema-catalog::backpack.cast'),
+            'type' => 'repeatable',
+            'subfields' => [
+                [
+                    'name' => 'name',
+                    'label' => __('cinema-catalog::backpack.actor'),
+                    'type' => 'text',
+                    'wrapper' => ['class' => 'form-group col-md-6']
+                ],
+                [
+                    'name' => 'value',
+                    'label' => __('cinema-catalog::backpack.character'),
+                    'type' => 'text',
+                    'wrapper' => ['class' => 'form-group col-md-6']
+                ],
+
+            ],
+            'new_item_label' => __('cinema-catalog::backpack.add_element'),
+            'reorder' => true,
+            'init_rows' => 1,
+            'tab' => __('cinema-catalog::backpack.cast')
+
+
+        ]);
+
+        CRUD::addfield([
             'name' => 'sponsors',
             'label' => __('cinema-catalog::backpack.sponsors'),
             'type' => 'repeatable',

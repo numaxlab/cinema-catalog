@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->text('trailer')->nullable()->change();
+            $table->json('cast')->nullable();
         });
     }
 
@@ -19,9 +19,10 @@ return new class extends Migration {
      * Reverse the migrations.
      */
     public function down(): void
+
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->string('trailer')->nullable()->change();
+            $table->dropColumn('cast');
         });
     }
 };

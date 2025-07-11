@@ -108,5 +108,9 @@ return [
         'production' => 'Produtora',
         'production_direction' => 'Direción de produción',
         'distribution' => 'Distribución',
-    ]
+    ],
+
+    'cast' => 'Reparto',
+    'actor' => 'Actor/actriz',
+    'character' => 'Personaxe',
 ];

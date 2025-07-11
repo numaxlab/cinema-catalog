@@ -54,7 +54,8 @@ class Project extends Model
         'trailer',
         'custom_type',
         'custom_status',
-        'highlight'
+        'highlight',
+        'cast'
     ];
 
     public $translatable = [
@@ -81,6 +82,7 @@ class Project extends Model
         'gallery_files_paths' => 'array',
         'sponsors' => 'array',
         'attachments' => 'array',
+        'cast' => 'array',
 
     ];
 
